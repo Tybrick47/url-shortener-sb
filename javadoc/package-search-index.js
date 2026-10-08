@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.url.shortener"},{"l":"com.url.shortener.models"},{"l":"com.url.shortener.repository"},{"l":"com.url.shortener.security.jwt"},{"l":"com.url.shortener.service"}];updateSearchResults();
