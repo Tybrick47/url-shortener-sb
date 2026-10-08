@@ -1,5 +1,6 @@
 name: Build and Deploy Site
 
+
 on:
   push:
     branches: [ main ]
@@ -52,7 +53,7 @@ jobs:
       - name: Collect site files
         run: |
           mkdir -p site/javadoc site/tests
-          cp src/main/html/index.md site/
+          cp -r src/main/html/. site/
           cp -r $(find target -type d -name apidocs | head -1)/* site/javadoc/
           cp $(find target -name "surefire*.html" | head -1) site/tests/surefire.html
 
