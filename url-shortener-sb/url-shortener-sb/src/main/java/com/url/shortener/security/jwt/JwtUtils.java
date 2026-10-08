@@ -8,6 +8,7 @@ import javax.crypto.SecretKey;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 
 import com.url.shortener.service.UserDetailsImpl;
 
@@ -17,12 +18,14 @@ import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.http.HttpServletRequest;
 
+
+@Component 
 public class JwtUtils {
 
-    @Value ("${jwt.secret}")
+    @Value("${jwt.secret}")
     private String jwtSecret;
 
-    @Value ("${jwt.expirations}")
+    @Value("${jwt.expiration}")
     private int jwtExpirationMs;
 
     public String getJwtFromHeader(HttpServletRequest request){
